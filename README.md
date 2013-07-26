@@ -1,0 +1,2 @@
+org.mantisbt.plugins.MingleIntegration
+======================================
