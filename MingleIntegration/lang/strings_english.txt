@@ -1,0 +1,14 @@
+<?php
+$s_plugin_MingleIntegration_title = 'Mingle Integration';
+$s_plugin_MingleIntegration_description = "Integration with Thoughtwork's Mingle.";
+$s_plugin_MingleIntegration_config = 'Configuration';
+$s_plugin_MingleIntegration_mingle_url = 'URL to Mingle instance';
+$s_plugin_MingleIntegration_mingle_username = 'Mingle username';
+$s_plugin_MingleIntegration_mingle_password = 'Mingle password';
+$s_plugin_MingleIntegration_project = 'Mingle project name';
+$s_plugin_MingleIntegration_default_card_type = 'Type of Mingle cards created by the plugin';
+$s_plugin_MingleIntegration_send_to_mingle = 'Send to Mingle';
+$s_plugin_MingleIntegration_error = 'Error';
+$s_plugin_MingleIntegration_view_in_mingle = 'View in Mingle';
+$s_plugin_MingleIntegration_error_no_curl = 'This plugin requires the cURL PHP extension (http://php.net/curl)';
+$s_plugin_MingleIntegration_additional_card_attributes = 'Mingle card attributes to display on Mantis bug page';
