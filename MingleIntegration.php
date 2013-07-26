@@ -92,12 +92,12 @@ class MingleIntegrationPlugin extends MantisPlugin
 
 		$additional_card_attributes = plugin_config_get('additional_card_attributes');
 		if (count($additional_card_attributes)) {
-			array_walk($additional_card_attributes, function($attribute) {
+			array_walk($additional_card_attributes, function(&$attribute) {
 				if (strpos($attribute, ' ') !== false) {
 					$attribute = '"' . $attribute . '"';
 				}
 			});
-			$mql_additional = ', ' . implode(', ', plugin_config_get('additional_card_attributes'));
+			$mql_additional = ', ' . implode(', ', $additional_card_attributes);
 		} else {
 			$mql_additional = '';
 		}
