@@ -76,7 +76,7 @@ print_manage_menu( );
           Attributes that contain a space character must be enclosed in quotes.
         </p>
         <p>
-          For instance : <pre>array("Assigned To", "Completion Status", "Remaining Value")</pre>
+          For instance : <pre>array(Assigned To, Completion Status, Remaining Value)</pre>
         </p>
       </td>
     </tr>

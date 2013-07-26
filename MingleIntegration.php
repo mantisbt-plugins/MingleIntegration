@@ -90,7 +90,13 @@ class MingleIntegrationPlugin extends MantisPlugin
 		// Retrieve current bug data
 		$bug = bug_get($bug_id, true);
 
-		if (count(plugin_config_get('additional_card_attributes'))) {
+		$additional_card_attributes = plugin_config_get('additional_card_attributes');
+		if (count($additional_card_attributes)) {
+			array_walk($additional_card_attributes, function($attribute) {
+				if (strpos($attribute, ' ') !== false) {
+					$attribute = '"' . $attribute . '"';
+				}
+			});
 			$mql_additional = ', ' . implode(', ', plugin_config_get('additional_card_attributes'));
 		} else {
 			$mql_additional = '';
