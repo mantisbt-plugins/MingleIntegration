@@ -1,6 +1,7 @@
 <style>
 div.mingle { background-color: #fff; width:300px; border: solid 1px #ccc; border-left: solid 6px #FF8400; padding: 1em;}
-.mingle h4 { margin-top: 0; }
+.mingle h4, .mingle h5 { margin-top: 0; }
+.mingle h4 { margin-bottom: 0; }
 .mingle a, { color: #000; }
 .mingle ul { list-style-type: none; margin:0; padding:0; }
 .mingle ul li { font-size: 0.9em; }
@@ -17,9 +18,10 @@ div.mingle { background-color: #fff; width:300px; border: solid 1px #ccc; border
           <ul>
               <h4>
                 <a href="<?php echo $urlCard ?>" target="_blank">
-                  <?php echo $card['name'] ?> (<?php echo $card['type'] ?> #<?php echo $card['number'] ?>)
+                  <?php echo $card['name'] ?>
                 </a>
               </h4>
+              <h5><?php echo $card['type'] ?> #<?php echo $card['number'] ?></h5>
 <?php foreach ($card as $attribute => $value): ?>
   <?php if (in_array($attribute, array('name', 'type', 'number')) || empty($value)): continue; endif ?>
           <li>
