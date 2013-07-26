@@ -22,10 +22,10 @@ print_manage_menu( );
 
     <tr <?php echo helper_alternate_class( )?>>
       <td class="category">
-        <?php echo plugin_lang_get( 'mingle_url' )?>
+        <?php echo plugin_lang_get( 'mingle_url_instance' )?>
       </td>
       <td  colspan="2">
-        <input type="text" name="mingle_url" value="<?php echo plugin_config_get( 'mingle_url' )?>" />
+        <input type="text" name="mingle_url_instance" value="<?php echo plugin_config_get( 'mingle_url_instance' )?>" />
       </td>
     </tr>
 

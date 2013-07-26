@@ -42,7 +42,7 @@ class MingleIntegrationPlugin extends MantisPlugin
 	 */
 	public function config() {
 		return array(
-			'mingle_url'                 => '',
+			'mingle_url_instance'        => '',
 			'project'                    => '',
 			'default_card_type'          => '',
 			'mingle_username'            => '',
@@ -104,7 +104,7 @@ class MingleIntegrationPlugin extends MantisPlugin
 
 		// Mingle API client
 		$mingle = new MingleClient(
-			plugin_config_get('mingle_url'), 
+			plugin_config_get('mingle_url_instance'), 
 			plugin_config_get('mingle_username'), 
 			plugin_config_get('mingle_password')
 		);
@@ -122,7 +122,7 @@ class MingleIntegrationPlugin extends MantisPlugin
 						'mantisUrl'      => sprintf('http://%s%s', $_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI']),
 						'mingleCardType' => plugin_config_get('default_card_type'),
 						'mingleProject'  => plugin_config_get('project'),
-						'mingleUrl'      => plugin_config_get('mingle_url'),
+						'mingleUrl'      => plugin_config_get('mingle_url_instance'),
 					)
 				);
 			} else {
@@ -132,7 +132,7 @@ class MingleIntegrationPlugin extends MantisPlugin
 						'card'    => $results[0],
 						'urlCard' => sprintf(
 							'%s/projects/%s/cards/%d', 
-							plugin_config_get('mingle_url'), 
+							plugin_config_get('mingle_url_instance'), 
 							plugin_config_get('project'), 
 							$results[0]['number']
 						)

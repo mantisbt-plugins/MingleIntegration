@@ -4,14 +4,14 @@ form_security_validate( 'plugin_MingleIntegration_config_edit' );
 auth_reauthenticate( );
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
 
-$f_mingle_url = gpc_get_string( 'mingle_url' );
+$f_mingle_url_instance = gpc_get_string( 'mingle_url_instance' );
 $f_mingle_username = gpc_get_string( 'mingle_username' );
 $f_mingle_password = gpc_get_string( 'mingle_password' );
 $f_project = gpc_get_string( 'project' );
 $f_default_card_type = gpc_get_string( 'default_card_type' );
 
-if( plugin_config_get( 'mingle_url' ) != $f_mingle_url ) {
-  plugin_config_set( 'mingle_url', $f_mingle_url );
+if( plugin_config_get( 'mingle_url_instance' ) != $f_mingle_url_instance ) {
+  plugin_config_set( 'mingle_url_instance', $f_mingle_url_instance );
 }
 
 if( plugin_config_get( 'mingle_username' ) != $f_mingle_username ) {
