@@ -13,7 +13,7 @@ class MingleIntegrationPlugin extends MantisPlugin
 		$this->name = 'Mingle Integration';
 		$this->description = plugin_lang_get('description');
 		$this->page = 'config';
-		$this->version = '0.3.1';
+		$this->version = '0.3.2';
 		$this->requires = array('MantisCore' => '>= 1.2.0');
 		$this->author = 'AramisAuto.com';
 		$this->contact = 'tristan.rivoallan@aramisauto.com';
